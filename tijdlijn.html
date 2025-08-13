@@ -1,0 +1,224 @@
+
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Abraxas: code → container → mythe (kaart + tijdlijn)</title>
+<meta name="description" content="Schematische kaart en tijdlijn: van fonetische code via Grieks/Romeinse containerisatie naar de moderne illusie (staat/kerk/geld), met bronnen.">
+<meta property="og:title" content="Abraxas: code → container → mythe">
+<meta property="og:description" content="Kaart + tijdlijn + bronnen (Josephus, Kirchman, Montfaucon, Ptolemaeus, Bartholinus).">
+<meta property="og:image" content="assets/social-preview.png">
+<meta property="twitter:card" content="summary_large_image">
+<style>
+  :root{--bg:#0b0b10;--fg:#e8e8ef;--muted:#aab;--accent:#ffd166;--card:#12121a;--edge:#6b6f80}
+  html,body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.5 system-ui,Segoe UI,Roboto,Inter,Arial}
+  a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
+  .wrap{max-width:1100px;margin:auto;padding:28px}
+  h1{font-size:clamp(22px,3vw,36px);margin:0 0 14px}
+  p.lead{color:var(--muted);margin:0 0 28px}
+  .card{background:var(--card);border:1px solid #1b1f2a;border-radius:16px;padding:18px}
+  .grid{display:grid;grid-template-columns:1fr;gap:18px}
+  @media(min-width:900px){.grid{grid-template-columns:1.2fr .8fr}}
+  .legend{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0}
+  .dot{width:12px;height:12px;border-radius:999px;display:inline-block;margin-right:6px;vertical-align:-2px}
+  .chip{display:inline-flex;gap:8px;align-items:center;background:#151824;border:1px solid #202635;border-radius:999px;padding:6px 10px;font-size:13px;color:#cfd3e6}
+  .muted{color:var(--muted)} .small{font-size:13px}
+  .btn{display:inline-block;background:#141722;border:1px solid #252a39;border-radius:12px;padding:10px 14px}
+  .btn:hover{background:#181c2a}
+  .two-col{display:grid;grid-template-columns:1fr;gap:14px}
+  @media(min-width:700px){.two-col{grid-template-columns:1fr 1fr}}
+  .node rect{fill:#171a26;stroke:#2a3042;stroke-width:1.2;rx:12}
+  .node text{fill:#e6e8f5;font:600 12.5px/1.35 Inter,system-ui}
+  .edge{stroke:var(--edge);stroke-width:1.2;marker-end:url(#arrow)}
+  .pill{fill:#0f1220;stroke:#242a3c;stroke-width:1;rx:10}
+  .pill text{fill:#cfd3e6;font:600 11.5px Inter,system-ui}
+  .axis{stroke:#2a2e3d;stroke-width:1}
+  .tick text{fill:#9aa3bd;font:12px Inter,system-ui}
+  .band rect{fill:#111420;stroke:#22283a;stroke-width:1;rx:8}
+  .band h3{fill:#f2f3fb;font:600 12.5px Inter}
+  .band p{fill:#b7bdd3;font:12px Inter}
+  .kbd{background:#0f1220;border:1px solid #1e2332;border-radius:6px;padding:2px 6px;font:12px monospace;color:#cbd1e6}
+  details{border:1px solid #1b1f2a;border-radius:12px;padding:12px 14px;background:#0f1220}
+  summary{cursor:pointer;font-weight:600}
+  ul.clean{list-style:none;padding-left:0;margin:10px 0}
+  ul.clean li{margin:6px 0}
+</style>
+<script>
+  function shareX(){
+    const url = encodeURIComponent(location.href);
+    const text = encodeURIComponent("Abraxas: code → container → mythe — kaart + tijdlijn + bronnen");
+    window.open(`https://twitter.com/intent/tweet?url=${url}&text=${text}`,'_blank','noopener');
+  }
+</script>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Abraxas: van code → container → mythe</h1>
+    <p class="lead">Kaart (links) + tijdlijn (rechts). Vervang de href’s door jouw echte bestanden in <span class="kbd">/assets/</span>.</p>
+
+    <div class="grid">
+      <!-- KAART -->
+      <section class="card" aria-label="Conceptuele kaart">
+        <div class="legend">
+          <span class="chip"><span class="dot" style="background:#ffd166"></span>Kern: taal/klank/geometrie</span>
+          <span class="chip"><span class="dot" style="background:#06d6a0"></span>Containerisatie (Rome/Grieks)</span>
+          <span class="chip"><span class="dot" style="background:#ef476f"></span>Mythologisering</span>
+          <span class="chip"><span class="dot" style="background:#00a6ff"></span>Verborgen bewakers</span>
+        </div>
+
+        <!-- SVG MAP -->
+        <svg viewBox="0 0 1100 720" width="100%" height="auto" role="img" aria-label="Kaart">
+          <defs>
+            <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+              <path d="M 0 0 L 10 5 L 0 10 z" fill="#6b6f80"></path>
+            </marker>
+          </defs>
+
+          <rect x="30" y="40" width="1040" height="190" class="pill" />
+          <text x="50" y="65">Fonetische oorsprong (Phoeniciërs, Germanen)</text>
+          <text x="50" y="88" class="muted">X als klank/teken; R/Y‑waardes; runen; 365‑code</text>
+
+          <rect x="30" y="250" width="1040" height="180" class="pill" />
+          <text x="50" y="275">Containerisatie (Ptolemaeus → Grieks/Romeins)</text>
+          <text x="50" y="298" class="muted">Koinè‑standaard; constellaties; juridische regie</text>
+
+          <rect x="30" y="450" width="1040" height="120" class="pill" />
+          <text x="50" y="475">Mythologisering (Montfaucon) + Publieke afleiding</text>
+          <text x="50" y="498" class="muted">Abraxas als “rare god”; beeld overschrijft code</text>
+
+          <rect x="30" y="580" width="1040" height="110" class="pill" />
+          <text x="50" y="605">Moderne illusie (staat / kerk / geld)</text>
+          <text x="50" y="628" class="muted">Administratieve taal → beleid → gedrag</text>
+
+          <!-- nodes -->
+          <g class="node" transform="translate(60,90)">
+            <rect width="260" height="70"></rect>
+            <a href="assets/phoenicians.pdf"><text x="12" y="24">Phoeniciërs (fonetisch)</text></a>
+            <text x="12" y="46" class="muted">alfabet + X; zeemacht; klank→letter→getal</text>
+          </g>
+          <g class="node" transform="translate(360,90)">
+            <rect width="260" height="70"></rect>
+            <a href="assets/germanic-runes.pdf"><text x="12" y="24">Germanen (runen)</text></a>
+            <text x="12" y="46" class="muted">bind‑runen; “samenbinders”</text>
+          </g>
+          <g class="node" transform="translate(660,90)">
+            <rect width="340" height="70"></rect>
+            <a href="assets/abraxas-notes.pdf"><text x="12" y="24">Abraxas als code (365)</text></a>
+            <text x="12" y="46" class="muted">letter‑getal; geometrie; kalender/navigatie</text>
+          </g>
+
+          <g class="node" transform="translate(60,300)">
+            <rect width="300" height="78"></rect>
+            <a href="assets/ptolemaeus-tetrabiblos.pdf"><text x="12" y="24">Ptolemaeus (knooppunt)</text></a>
+            <text x="12" y="46" class="muted">Koinè‑Grieks; hemelkaart; constellaties</text>
+          </g>
+          <g class="node" transform="translate(400,300)">
+            <rect width="300" height="78"></rect>
+            <a href="assets/ulpianus-liber-regularum.pdf"><text x="12" y="24">Ulpianus (juridische regie)</text></a>
+            <text x="12" y="46" class="muted">naamkeuze; canonbewaking</text>
+          </g>
+          <g class="node" transform="translate(740,300)">
+            <rect width="300" height="78"></rect>
+            <a href="assets/josephus-antiquities.pdf"><text x="12" y="24">Flavius Josephus (tijdcapsule)</text></a>
+            <text x="12" y="46" class="muted">lam & zegels‑schema</text>
+          </g>
+
+          <g class="node" transform="translate(60,490)">
+            <rect width="430" height="60"></rect>
+            <a href="assets/montfaucon-planches.pdf"><text x="12" y="24">Montfaucon (visueel rookgordijn)</text></a>
+            <text x="12" y="46" class="muted">iconografie overschrijft de code</text>
+          </g>
+          <g class="node" transform="translate(520,490)">
+            <rect width="520" height="60"></rect>
+            <a href="assets/hidden-church-notes.pdf"><text x="12" y="24">Verborgen kerkgenootschap (bewakers)</text></a>
+            <text x="12" y="46" class="muted">selectieve “sleutels”</text>
+          </g>
+
+          <!-- edges -->
+          <line class="edge" x1="320" y1="125" x2="660" y2="125"/>
+          <line class="edge" x1="200" y1="210" x2="200" y2="300"/>
+          <line class="edge" x1="490" y1="210" x2="550" y2="300"/>
+          <line class="edge" x1="830" y1="210" x2="890" y2="300"/>
+          <line class="edge" x1="210" y1="378" x2="275" y2="490"/>
+          <line class="edge" x1="550" y1="378" x2="780" y2="490"/>
+          <line class="edge" x1="890" y1="378" x2="260" y2="520"/>
+        </svg>
+
+        <div class="two-col small" style="margin-top:12px">
+          <div>
+            <div class="muted">Snelle links (vervang door echte paden):</div>
+            <ul class="clean">
+              <li><span class="kbd">PDF</span> Montfaucon → <a href="assets/montfaucon-planches.pdf">planches</a></li>
+              <li><span class="kbd">PDF</span> Kirchman → <a href="assets/kirchman-annulus-3deel.pdf">De Annulo (3e deel)</a></li>
+              <li><span class="kbd">PDF</span> Josephus → <a href="assets/josephus-antiquities.pdf">Antiquitates</a></li>
+              <li><span class="kbd">PDF</span> Ptolemaeus → <a href="assets/ptolemaeus-tetrabiblos.pdf">Tetrabiblos</a></li>
+              <li><span class="kbd">PDF</span> Bartholinus → <a href="assets/bartholinus-index.pdf">Index</a></li>
+              <li><span class="kbd">PDF</span> Kemper/Falck → <a href="assets/kemper-brieven.pdf">brieven</a></li>
+            </ul>
+          </div>
+          <div>
+            <div class="muted">Decoder‑haakjes:</div>
+            <ul class="clean">
+              <li>Letterwaarden X/R/Y (verschoven per alfabet)</li>
+              <li>Orion/Monoceros ↔ “7 zegels/ogen/24 oudsten”</li>
+              <li>Runen ↔ “samenbinders” (profetische taal)</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- TIJDLIJN -->
+      <aside class="card">
+        <h2 style="margin-top:0">Tijdlijn (ankerpunten)</h2>
+        <div class="band" style="margin-bottom:10px">
+          <svg viewBox="0 0 1000 420" width="100%" height="auto" role="img" aria-label="Tijdlijn">
+            <line x1="40" y1="360" x2="960" y2="360" class="axis"/>
+            <g class="tick"><line x1="140" y1="355" x2="140" y2="365" class="axis"/><text x="120" y="385">–1000</text></g>
+            <g class="tick"><line x1="300" y1="355" x2="300" y2="365" class="axis"/><text x="280" y="385">0</text></g>
+            <g class="tick"><line x1="460" y1="355" x2="460" y2="365" class="axis"/><text x="438" y="385">500</text></g>
+            <g class="tick"><line x1="620" y1="355" x2="620" y2="365" class="axis"/><text x="598" y="385">1000</text></g>
+            <g class="tick"><line x1="780" y1="355" x2="780" y2="365" class="axis"/><text x="758" y="385">1500</text></g>
+            <g class="tick"><line x1="940" y1="355" x2="940" y2="365" class="axis"/><text x="918" y="385">2000</text></g>
+
+            <g transform="translate(70,40)"><rect width="260" height="70" class="band"/><text x="10" y="22" class="h3">Phoeniciërs</text><text x="10" y="44" class="p">fonetiek; X; zee</text></g>
+            <g transform="translate(250,130)"><rect width="260" height="70" class="band"/><text x="10" y="22" class="h3">Germanen</text><text x="10" y="44" class="p">runen; bind‑tekens</text></g>
+            <g transform="translate(370,220)"><rect width="260" height="70" class="band"/><text x="10" y="22" class="h3">Ptolemaeus (87–150)</text><text x="10" y="44" class="p">Koinè; hemelkaart</text></g>
+            <g transform="translate(420,310)"><rect width="260" height="70" class="band"/><text x="10" y="22" class="h3">Flavius Josephus (1e eeuw)</text><text x="10" y="44" class="p">tijdcapsule</text></g>
+            <g transform="translate(600,220)"><rect width="260" height="70" class="band"/><text x="10" y="22" class="h3">Ulpianus (ca. 170–223)</text><text x="10" y="44" class="p">juridische regie</text></g>
+            <g transform="translate(760,130)"><rect width="260" height="70" class="band"/><text x="10" y="22" class="h3">Kirchman (17e eeuw)</text><text x="10" y="44" class="p">De Annulo (3e deel)</text></g>
+            <g transform="translate(820,40)"><rect width="260" height="70" class="band"/><text x="10" y="22" class="h3">Montfaucon (1655–1741)</text><text x="10" y="44" class="p">mythologie‑laag</text></g>
+          </svg>
+        </div>
+
+        <div class="two-col">
+          <a class="btn" href="assets/q-document.pdf">Download bundel (PDF)</a>
+          <a class="btn" href="#bronnen">Bronnenlijst</a>
+        </div>
+        <div style="margin-top:12px">
+          <a class="btn" onclick="shareX()">Deel op X</a>
+          <a class="btn" href="assets/qr.png" download>QR</a>
+        </div>
+      </aside>
+    </div>
+
+    <h2 id="bronnen" style="margin:22px 0 10px">Bronnen (verbind je eigen files)</h2>
+    <details open class="card">
+      <summary>Overzicht</summary>
+      <ul class="clean small">
+        <li>Montfaucon, <em>L’antiquité expliquée</em> → <a href="assets/montfaucon-planches.pdf">assets/montfaucon-planches.pdf</a></li>
+        <li>Kirchman, <em>De Annulo Triplici</em> (incl. 3e deel) → <a href="assets/kirchman-annulus-3deel.pdf">assets/kirchman-annulus-3deel.pdf</a></li>
+        <li>Flavius Josephus, <em>Antiquitates</em>/<em>Vita</em> → <a href="assets/josephus-antiquities.pdf">assets/josephus-antiquities.pdf</a></li>
+        <li>Ptolemaeus, <em>Tetrabiblos</em> → <a href="assets/ptolemaeus-tetrabiblos.pdf">assets/ptolemaeus-tetrabiblos.pdf</a></li>
+        <li>Bartholinus (medici), index → <a href="assets/bartholinus-index.pdf">assets/bartholinus-index.pdf</a></li>
+        <li>Kemper / Falck (1813–1815) → <a href="assets/kemper-brieven.pdf">assets/kemper-brieven.pdf</a></li>
+        <li>Voorhof van de Zielen (Hoogstraten) → <a href="assets/voorhof-der-zielen.pdf">assets/voorhof-der-zielen.pdf</a></li>
+        <li>Quaker “Lamb’s Officer” (1659) → <a href="assets/lambs-officer-1659.pdf">assets/lambs-officer-1659.pdf</a></li>
+      </ul>
+      <p class="small muted">Zet jouw echte bestanden met dezelfde naam in <span class="kbd">/assets/</span> of pas de links hierboven aan.</p>
+    </details>
+
+    <p class="small muted" style="margin-top:16px">Tip: wil je een “open teller” toevoegen? Ik kan dezelfde tellertje‑code gebruiken als op je verklaring‑pagina (fetch → JSON → render).</p>
+  </div>
+</body>
+</html>
